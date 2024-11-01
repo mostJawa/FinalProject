@@ -1,38 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace FinalProject
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void btnSignIn_Click(object sender, RoutedEventArgs e)
-        {
 
         }
 
+        // Close the current window and open the CreateAccount window
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
+            var newPage = new CreateAccount();
+            newPage.Show();
+            this.Close();
+        }
 
+        // Close the current window and open the SignIn window
+        private void btnSignIn_Click(object sender, RoutedEventArgs e)
+        {
+            var newPage = new SignIn();
+            newPage.Show();
+            this.Close();
+        }
+
+        // Close the current window
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

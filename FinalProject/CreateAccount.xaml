@@ -1,0 +1,82 @@
+﻿<Window x:Class="FinalProject.CreateAccount"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProject"
+        mc:Ignorable="d"
+        Title="CreateAccount" Height="420" Width="300"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
+        >
+    <Border Background= "#272537"
+            CornerRadius="25">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <!-- Close button -->
+                <Button HorizontalAlignment="Left" Background="Transparent" BorderThickness="0" Click="Close_Click" Margin="5, 5, 0, 0">
+                    <Image Width="40" Height="40" Margin="0, 0, 0, 0" Source="Images/x-button.png"/>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="70"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <Label Content="Create Account" BorderBrush="Aqua" HorizontalAlignment="Center" Margin="25,7,0,0" FontSize="22" Foreground="White" FontWeight="Bold"/>
+
+            </StackPanel>
+            <Rectangle Height="1" Stroke="Black" Width="296">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+
+            <!-- First Name Input -->
+            <Label x:Name="fName" FontWeight="Bold" Foreground="#708090" FontSize="15" Content="First Name:" Margin="50, 10, 0, 0"/>
+            <Label BorderBrush="Aqua" HorizontalAlignment="Center" Margin="0, 0,0,0" FontSize="24" Foreground="White" FontWeight="Bold">
+                <TextBox x:Name="fNameTextBox" TextAlignment="Center" 
+                    Height="25" Width="150" FontSize="20"
+                    Background="#444eff"/>
+            </Label>
+
+            <!-- Last Name Input -->
+            <Label x:Name="lName" FontWeight="Bold" Foreground="#708090" FontSize="15" Content="Last Name:" Margin="50, 10, 0, 0"/>
+            <Label BorderBrush="Aqua" HorizontalAlignment="Center" Margin="0, 0,0,0" FontSize="24" Foreground="White" FontWeight="Bold">
+                <TextBox x:Name="lNameTextBox" TextAlignment="Center" 
+                    Height="25" Width="150" FontSize="20"
+                    Background="#444eff"/>
+            </Label>
+            
+            <!-- Username Input -->
+            <Label FontWeight="Bold" Foreground="#708090" FontSize="15" Margin="50, 10, 0, 0" >Username:</Label>
+            <Label BorderBrush="Aqua" HorizontalAlignment="Center" Margin="0, 0,0,0" FontSize="24" Foreground="White" FontWeight="Bold">
+                <TextBox x:Name="usernameTextBox" TextAlignment="Center" 
+                    Height="25" Width="150" Margin="0,0,0,0" FontSize="20"
+                    Background="#444eff"/>
+            </Label>
+
+            <!-- Password Input -->
+            <Label FontWeight="Bold" Foreground="#708090" FontSize="15" Margin="50, 10, 0, 0" >Password:</Label>
+            <Label BorderBrush="Aqua" HorizontalAlignment="Center" Margin="0, 0,0,0" FontSize="24" Foreground="White" FontWeight="Bold">
+
+                <PasswordBox x:Name="passwordTextBox" 
+                    Height="25" Width="150" Margin="0,0,0,0" FontSize="20"
+                    Background="#444eff"/>
+            </Label>
+            
+            <!-- Button that takes user to MakeSchedule page -->
+            <Button Name="CreateAccButton" Width="60" Margin="0, 20, 0, 0" Click="CreateAccButton_Click">
+                Create
+            </Button>
+
+        </StackPanel>
+
+    </Border>
+</Window>

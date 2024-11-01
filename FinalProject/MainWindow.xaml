@@ -5,19 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinalProject"
         mc:Ignorable="d"
-        Title="StartPage" Height="375" Width="300">
-    <Border Background= "#272537">
+        Title="StartPage" Height="350" Width="250"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
+        >
+    <Border Background= "#272537"
+            CornerRadius="25">
         <Grid>
-            <Label Content="Title" HorizontalAlignment="Center" Margin="0,95,0,0" FontSize="24" Foreground="White"/>
-            <Button x:Name="btnSignIn" Content="Sign In"
-                    Height="40" Width="150" Margin="0,60,0,0" FontSize="20"
-                    Click="btnSignIn_Click"
-                    Background="#708090"/>
-            <Button x:Name="btnRegister" Content="Register"
-                    Height="40" Width="150" Margin="0,150,0,0" FontSize="20"
-                    Click="btnRegister_Click"
-                    Background="#708090"/>
+            <Rectangle RadiusX="25" RadiusY="25">
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#c33764" Offset="0"/>
+                        <GradientStop Color="#1d2671" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <StackPanel>
+                <!-- X-out close button, closes the application-->
+                <Button HorizontalAlignment="Left" Background="Transparent" BorderThickness="0" Click="Close_Click" Margin="5, 5, 0, 0">
+                    <Image Width="40" Height="40" Margin="0, 0, 0, 0" Source="Images/x-button.png"/>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="70"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <!-- Wizard hat image-->
+                <Image Width="100" Source="Images/wizardHat.png" Margin="0, 10, 0, 0"/>
+                <Label Content="Sched-Wiz" FontWeight="Bold" FontStyle="Italic"  HorizontalAlignment="Center" Margin="0, 0,0,0" FontSize="24" Foreground="White"/>
+
+                <!-- Sign in button-->
+                <Button x:Name="btnSignIn" Content="Sign In"
+            Height="30" Width="150" Margin="0,15,0,0" FontSize="20"
+            Click="btnSignIn_Click"
+            Background="#708090"/>
+                <!-- Register button-->
+                <Button x:Name="btnRegister" Content="Register"
+            Height="30" Width="150" Margin="0,15,0,0" FontSize="20"
+            Click="btnRegister_Click"
+            Background="#708090"/>
+            </StackPanel>
         </Grid>
+        
 
     </Border>
 </Window>

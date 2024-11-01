@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 
 namespace FinalProject
 {
@@ -13,5 +7,12 @@ namespace FinalProject
     /// </summary>
     public partial class App : Application
     {
+        //public User currentUser{ get; set; }
+
+
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            //Application.Current.Properties["thisUser"] = new User();
+        }
     }
 }
